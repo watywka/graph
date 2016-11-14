@@ -83,7 +83,7 @@ void search (int n, int* a, vector<int>* out)
     for(int i=0; i< A->get_n();i++)
     {
         tmp_path->clear();
-        val = A->path(i,i,t, tmp_path); 
+        val = A->path(i,i,t, tmp_path);
         if(val>max)
         {
             max = val;
@@ -121,7 +121,8 @@ void shuf(int n, int* a)
             a[i*n+j] = b[i*n+j];
         }
     }
-    delete b;
+    delete shuf;
+    delete[] b;
 }
 void gen(int n, int p, int* a)
 {
@@ -187,6 +188,8 @@ void gen(int n, int p, int* a)
         }
     }
 
+    delete[] DAG;
+    delete razb;
     shuf(n,a);
 
 

@@ -161,7 +161,6 @@ int main(int argc, char* argv[])
 
     if(oflag)
     {
-        int kek[10] = {5,6,1,4,8,2,9,0,3,7};
         a = new int[n*n];
         gen(n, p, a);
         fout << n << endl;
@@ -173,6 +172,8 @@ int main(int argc, char* argv[])
             }
             fout << endl;
         }
+        fout.close();
+        delete[] a;
 
     }
 
